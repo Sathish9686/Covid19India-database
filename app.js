@@ -95,7 +95,7 @@ app.get("/districts/:districtId/", async (request, response) => {
     WHERE
       district_id = ${districtId};`;
   const district = await db.get(getDistrictsQuery);
-  response.send(convertDistrictDbObjectToResponseObject(district));
+response.send(convertDistrictObjectToResponseObject(district))
 });
 
 //DELETE API DISTRICT API 5 ;
